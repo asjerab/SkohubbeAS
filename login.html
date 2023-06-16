@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="test-res.css">
-    <script src="https://kit.fontawesome.com/ced2e054c6.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/main_logo_skohubben.png" />
-    <title>Shopping Cart</title>
     <script src="script.js" defer></script>
-
+    <script src="https://kit.fontawesome.com/ced2e054c6.js" crossorigin="anonymous"></script>
+    <title>Login</title>
 </head>
 
-<body onload="displayCart()">
-
+<body class="bodyLogin">
 
     <!--==============================NAV BAR WITH SEARCH BAR AND LOGO/ WITH RESPONSIVE NAVBAR==============================-->
 
@@ -47,7 +45,7 @@
             <hr>
             <a href="index.html">Home <i class="fa-solid fa-house-user res-house"></i></a>
             <hr>
-            <a href="login.html">User <i class="fa-solid fa-user res-user"></i></a>
+            <a href="user_page.html">User <i class="fa-solid fa-user res-user"></i></a>
             <hr>
             <a href="shoppingCart.html">Cart <i class="fa-solid fa-cart-shopping res-shopping"></i></a>
         </div>
@@ -85,20 +83,32 @@
 
     <!--==============================*CLOSES*==============================-->
 
-    <div class="shopping-cart-name-hr">
-        <h1>Shopping Cart <i class="fa-solid fa-cart-shopping"></i> </h1>
-        <hr>
-    </div>
 
-    <div id="shopping-cart-wrap"></div>
+    <div class="logInnWrapperFlex">
+        <div class="logInnWrapper">
+            <br>
+            <br>
+            <div class="logInInfo">
+                <h1>Login</h1>
+                <p>Skohubben innlogning</p>
+            </div>
+            <input type="text" id="username" placeholder="Username" required>
+            <div class="passwordWrapper">
+                <input type="password" id="password" placeholder="Password" required>
+                <i onclick="togglePasswordVisibility()" class="fa-solid fa-eye eye"></i>
+            </div>
+            <a href="user_page.html"><button type="submit" onclick="checkCredentials()" aria-required="">Log
+                    in</button></a>
+            <div class="otherLogIn">
+                <button class="apple">Sign in with Apple <i class="fa-brands fa-apple"></i></button>
+                <button>Sign in with Google <i class="fa-brands fa-google"></i></button>
 
-
-    <div class="continue_payment_flex">
-        <div class="continue_payment">
-            <p>Total Pris : $<span id="total"></span></p>
-            <a href="payment.html"><button>Contniue Payment</button></a>
+            </div>
         </div>
     </div>
+
+
+    <!--==============================FOOTER FOR ALL PAGES==============================-->
 
 
     <div class="footer_all_pages">
@@ -161,7 +171,10 @@
                 <i class="fa-solid fa-paper-plane"></i> test@gmail.com
             </div>
         </div>
-    </div>
+
+
+        <!--==============================*CLOSES*==============================-->
+
 
 
 

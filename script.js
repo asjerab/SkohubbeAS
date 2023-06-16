@@ -30,6 +30,29 @@ else {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+function checkCredentials() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Check if the entered credentials are correct
+    if (username === 'sko123' && password === 'admin123') {
+        alert('Login successful!');
+        // You can redirect the user to another page or perform any other actions here
+    } else {
+        alert('Incorrect username or password. Please try again.');
+    }
+}
+
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+}
+
+
 // Dette er kode for search bar
 
 
